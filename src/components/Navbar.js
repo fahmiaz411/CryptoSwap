@@ -5,7 +5,7 @@ function Navbar({ sidebar, setSidebar }) {
     <>
       <div
         style={{
-          zIndex: 2,
+          zIndex: 3,
           position: "absolute",
           width: "100%",
           height: 64,

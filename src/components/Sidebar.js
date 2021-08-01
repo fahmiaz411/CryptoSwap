@@ -24,7 +24,7 @@ function Sidebar({
       <aside
         style={{
           position: "fixed",
-          zIndex: 1,
+          zIndex: 2,
           paddingTop:
             scrollState == "top" ? 74 : scrollState == "bottom" ? 14 : 74,
           display: "flex",

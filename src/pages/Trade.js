@@ -22,7 +22,13 @@ function Trade({ scrollState, width, active, price, connected = false }) {
         style={{
           background: "#eee",
           padding: `74px 20px`,
-          paddingLeft: sidebar ? 270 : width < 960 ? 20 : 90,
+          paddingLeft: sidebar
+            ? width < 960
+              ? 20
+              : 270
+            : width < 960
+            ? 20
+            : 90,
           height: "100vh",
           transition: "0.3s ease",
           display: "flex",
@@ -81,7 +87,7 @@ function Trade({ scrollState, width, active, price, connected = false }) {
         >
           <div //header
             style={{
-              width: 350,
+              width: 330,
               margin: 10,
               display: "flex",
               flexDirection: "column",

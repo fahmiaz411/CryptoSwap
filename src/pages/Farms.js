@@ -76,7 +76,7 @@ function Farms({ scrollState, width, active, price }) {
         style={{
           background: "#eee",
           padding: `64px 0px`,
-          paddingLeft: sidebar ? 250 : width < 960 ? 0 : 70,
+          paddingLeft: sidebar ? (width < 960 ? 0 : 250) : width < 960 ? 0 : 70,
           minHeight: "100vh",
           transition: "0.3s ease",
           display: "flex",
@@ -133,7 +133,7 @@ function Farms({ scrollState, width, active, price }) {
           <div //input
             style={{
               display: "flex",
-              justifyContent: "flex-end",
+              justifyContent: width < 600 ? "space-between" : "flex-end",
             }}
           >
             <div //sortby
@@ -163,6 +163,7 @@ function Farms({ scrollState, width, active, price }) {
                     borderBottom: "1px solid #D7CAEC",
                     borderRadius: `${sDrop ? "20px 20px 0 0" : "20px"}`,
                     transition: "0.3s ease",
+                    width: width < 960 ? 136 : "",
                   }}
                 >
                   <div>{list[sort]}</div>
@@ -173,16 +174,18 @@ function Farms({ scrollState, width, active, price }) {
                     style={{
                       width: 15,
                       position: "absolute",
-                      transform: "translateX(150px) translateY(-20px)",
+                      transform: `translateX(${
+                        width < 960 ? "90" : "150"
+                      }px) translateY(-20px)`,
                     }}
                   />
                 </div>
 
                 <div
                   style={{
-                    marginTop: 0,
+                    marginTop: -1,
                     position: "absolute",
-                    width: 200,
+                    width: width < 960 ? 136 : 200,
                     zIndex: 1,
                     height: sDrop ? 44 * list.length : 0,
                     overflow: "hidden",
@@ -237,6 +240,7 @@ function Farms({ scrollState, width, active, price }) {
                   border: "none",
                   cursor: "unset",
                   outline: "none",
+                  width: width < 960 ? 160 : "",
                 }}
                 placeholder="Search Farms"
               />

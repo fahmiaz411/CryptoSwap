@@ -30,9 +30,9 @@ function Pools({ scrollState, width, active, price }) {
       name: "CPIE",
       backpic: "cpie.svg",
       pic: "cpie.svg",
-      apr: 1058.32,
-      liquidty: 798925,
-      multiplier: 0.4,
+      apr: 219.4,
+      staked: 3760519.82,
+      tStaked: 3593637927,
     },
   ]);
 
@@ -53,7 +53,7 @@ function Pools({ scrollState, width, active, price }) {
         style={{
           background: "#eee",
           padding: `64px 0px`,
-          paddingLeft: sidebar ? 250 : width < 960 ? 0 : 70,
+          paddingLeft: sidebar ? (width < 960 ? 0 : 250) : width < 960 ? 0 : 70,
           minHeight: "100vh",
           transition: "0.3s ease",
           display: "flex",
@@ -83,7 +83,7 @@ function Pools({ scrollState, width, active, price }) {
           >
             <span
               style={{
-                fontSize: 48,
+                fontSize: width < 600 ? 40 : 48,
                 fontWeight: 900,
                 color: "white",
               }}
@@ -92,7 +92,7 @@ function Pools({ scrollState, width, active, price }) {
             </span>
             <span
               style={{
-                fontSize: 24,
+                fontSize: width < 600 ? 20 : 24,
                 fontWeight: 700,
                 color: "white",
               }}
@@ -199,20 +199,30 @@ function Pools({ scrollState, width, active, price }) {
                         />
                       </div>
                     </div>
-                    <div //name
-                      className="txt600"
+                    <div
                       style={{
-                        margin: "0 20px",
                         display: "flex",
                         flexDirection: "column",
+                        justifyContent: "center",
                       }}
                     >
-                      <span>{d.name}</span>
-                      <span
-                        style={{ color: "rgb(80, 227, 194)", fontSize: 14 }}
+                      <div //name
+                        className="txt600"
+                        style={{
+                          margin: "0 20px",
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
                       >
-                        Earn {d.name} stake {d.name}
-                      </span>
+                        <span>{d.name}</span>
+                        {width > 600 && (
+                          <span
+                            style={{ color: "rgb(80, 227, 194)", fontSize: 14 }}
+                          >
+                            Earn {d.name} stake {d.name}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
                   <div //earned
@@ -221,14 +231,14 @@ function Pools({ scrollState, width, active, price }) {
                       flexDirection: "column",
                     }}
                   >
-                    <span className="txt12">Earned</span>
+                    <span className="txt12">CPIE Earned</span>
                     <span
                       style={{
                         color: "rgb(189, 194, 196)",
                         fontWeight: 600,
                       }}
                     >
-                      0
+                      0.0
                     </span>
                   </div>
                   <div //apr
@@ -258,11 +268,25 @@ function Pools({ scrollState, width, active, price }) {
                           flexDirection: "column",
                         }}
                       >
-                        <span className="txt12">Liquidity</span>
+                        <span className="txt12">Total Staked</span>
                         <span className="txt600">
                           {formatter
-                            .format(d.liquidty)
-                            .substring(0, d.liquidty.toString().length + 2)}
+                            .format(d.tStaked)
+                            .substring(1, d.tStaked.toString().length + 4)}
+                          CPIE
+                        </span>
+                        <span
+                          style={{
+                            fontSize: 12,
+                            color: "rgb(110, 163, 170)",
+                            fontWeight: 600,
+                          }}
+                        >
+                          ~
+                          {formatter
+                            .format(d.staked)
+                            .substring(1, d.staked.toString().length + 4)}{" "}
+                          USD
                         </span>
                       </div>
                       <div //multip
@@ -271,8 +295,8 @@ function Pools({ scrollState, width, active, price }) {
                           flexDirection: "column",
                         }}
                       >
-                        <span className="txt12">Multiplier</span>
-                        <span className="txt600">{d.multiplier}x</span>
+                        <span className="txt12">Ends in</span>
+                        <span className="txt600">-</span>
                       </div>
                     </>
                   )}
@@ -308,8 +332,8 @@ function Pools({ scrollState, width, active, price }) {
                       ? width > 960
                         ? 173
                         : width > 600
-                        ? 293
-                        : 382
+                        ? 310
+                        : 420
                       : 0,
                     transition: "0.7s ease",
                     overflow: "hidden",
@@ -323,12 +347,23 @@ function Pools({ scrollState, width, active, price }) {
                       order: width > 960 ? 1 : 0,
                     }}
                   >
+                    {width < 600 && (
+                      <div //desc
+                        style={{
+                          marginBottom: 10,
+                          color: "rgb(80, 227, 194)",
+                          fontWeight: 600,
+                        }}
+                      >
+                        Earn {d.name} stake {d.name}
+                      </div>
+                    )}
                     <div //earned
                       style={{
                         order: width > 960 ? 2 : 1,
                         display: "flex",
                         flex: 1,
-                        margin: width < 600 ? "" : "10px 20px",
+                        margin: width < 600 ? "10px 0" : "10px 20px",
                         justifyContent: "space-between",
                         alignItems: "center",
                         border: "1px solid black",
@@ -358,7 +393,7 @@ function Pools({ scrollState, width, active, price }) {
                           </span>
                         </span>
                         <span className="txt600" style={{ fontSize: 20 }}>
-                          0
+                          0.00000
                         </span>
                       </div>
                       <button
@@ -370,7 +405,7 @@ function Pools({ scrollState, width, active, price }) {
                           cursor: "no-drop",
                         }}
                       >
-                        Harvest
+                        Collect
                       </button>
                     </div>
                     <div //unlock
@@ -378,9 +413,9 @@ function Pools({ scrollState, width, active, price }) {
                         order: width > 960 ? 1 : 2,
                         display: "flex",
                         flex: 1,
-                        margin: width < 600 ? "" : "10px 20px",
+                        margin: width < 600 ? "10px 0" : "10px 20px",
                         flexDirection: "column",
-                        justifyContent: "flex-end",
+                        justifyContent: "center",
                         alignItems: "center",
                         width: "100%",
                       }}
@@ -390,9 +425,10 @@ function Pools({ scrollState, width, active, price }) {
                           color: "rgb(110, 163, 170)",
                           fontWeight: "600",
                           fontSize: 12,
+                          alignSelf: "flex-start",
                         }}
                       >
-                        START FARMING
+                        START STAKING
                       </span>
                       <button
                         className="btn_l"
@@ -414,7 +450,7 @@ function Pools({ scrollState, width, active, price }) {
                           justifyContent: "space-between",
                         }}
                       >
-                        <span className="txt600">APR</span>
+                        <span className="txt12">APR:</span>
                         <span
                           className="txt600"
                           style={{
@@ -427,26 +463,18 @@ function Pools({ scrollState, width, active, price }) {
                           %
                         </span>
                       </div>
-                      <div // multip
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                        }}
-                      >
-                        <span className="txt600">Multiplier</span>
-                        <span className="txt600">{d.multiplier}x</span>
-                      </div>
                       <div // liq
                         style={{
                           display: "flex",
                           justifyContent: "space-between",
                         }}
                       >
-                        <span className="txt600">Liquidity</span>
+                        <span className="txt12">Total Staked:</span>
                         <span className="txt600">
                           {formatter
-                            .format(d.liquidty)
-                            .substring(0, d.liquidty.toString().length + 2)}
+                            .format(d.tStaked)
+                            .substring(1, d.tStaked.toString().length + 4)}{" "}
+                          CPIE
                         </span>
                       </div>
                     </>
@@ -458,6 +486,7 @@ function Pools({ scrollState, width, active, price }) {
                       flexDirection: "column",
                       justifyContent: "center",
                       fontWeight: 600,
+                      justifyContent: "space-between",
                     }}
                   >
                     <Link
@@ -467,7 +496,7 @@ function Pools({ scrollState, width, active, price }) {
                         width: 143,
                       }}
                     >
-                      <span>Get CPIE-USDT LP</span>
+                      <span>View Project Site</span>
                     </Link>
                     <Link
                       style={{
@@ -477,6 +506,24 @@ function Pools({ scrollState, width, active, price }) {
                       }}
                     >
                       <span>View Contract</span>
+                    </Link>
+                    <Link
+                      style={{
+                        textDecoration: "none",
+                        color: "rgb(80, 227, 194)",
+                        width: 77,
+                      }}
+                    >
+                      <button
+                        style={{
+                          border: "2px solid rgb(118, 69, 217)",
+                          padding: "0 10px",
+                          borderRadius: 20,
+                          color: "rgb(118, 69, 217)",
+                        }}
+                      >
+                        Manual
+                      </button>
                     </Link>
                   </div>
                 </div>

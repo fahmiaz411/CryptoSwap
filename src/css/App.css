@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bbb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #89dbc7;
+  border-radius: 10px;
+}
+
+.ico {
+  opacity: 0.8;
+  width: 35px;
+  height: 35px;
+}
+
+.ico:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.btn_l {
+  background: #50e3c2;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  opacity: 0.9;
+}
+
+.btn_l:hover {
+  opacity: 1;
+}
+
+.link {
+  text-decoration: none;
+  color: #89dbc4;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.link:hover {
+  background: #dde7ff;
+  color: #89dbc4;
+  transition: 0.3s ease;
+}
+
+.link_s {
+  text-decoration: none;
+  color: #89dbc4;
+  font-weight: 700;
+  background: #eee;
+  transition: 0.3s ease;
+}
+
+.link_s:hover {
+  background: #dde7ff;
+  color: #89dbc4;
+  transition: 0.3s ease;
+}
+
+.inp_d {
+  background: rgb(238, 234, 244);
+  color: rgb(91, 90, 153);
+  font-weight: 700;
+  padding: 10px 20px;
+  width: 200px;
+  transition: 0.3s ease;
+}
+
+.inp_d:hover {
+  background: rgb(218, 201, 248);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.inp_d::placeholder {
+  color: rgb(91, 90, 153);
+}
+
+.txt600 {
+  color: rgb(91, 90, 153);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.txt12 {
+  font-size: 12px;
+  color: rgb(91, 90, 153);
+}

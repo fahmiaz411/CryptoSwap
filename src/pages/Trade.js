@@ -159,17 +159,17 @@ function Trade({ scrollState, width, active, price, connected = false }) {
                         background: "transparent",
                         color: "rgb(91, 90, 153)",
                         fontWeight: 600,
-                        width: 190,
+                        outline: "none",
+                        width: 170,
                       }}
                       type="number"
                       placeholder="0.0"
                     />
                     <div>
                       <img
-                        className="ico"
                         src="assets/logo.png"
                         alt=""
-                        style={{ transform: "rotate(90deg)" }}
+                        style={{ margin: 10, width: 30, height: 30 }}
                       />
                       <span>Matic</span>
                       <img
@@ -221,17 +221,17 @@ function Trade({ scrollState, width, active, price, connected = false }) {
                         background: "transparent",
                         color: "rgb(91, 90, 153)",
                         fontWeight: 600,
-                        width: 190,
+                        outline: "none",
+                        width: 170,
                       }}
                       type="number"
                       placeholder="0.0"
                     />
                     <div>
                       <img
-                        className="ico"
                         src="assets/logo.png"
                         alt=""
-                        style={{ transform: "rotate(90deg)" }}
+                        style={{ margin: 10, width: 30, height: 30 }}
                       />
                       <span>Matic</span>
                       <img
@@ -301,19 +301,9 @@ function Trade({ scrollState, width, active, price, connected = false }) {
                           placeholder="0.0"
                         />
                         <div>
-                          <img
-                            className="ico"
-                            src="assets/logo.png"
-                            alt=""
-                            style={{ transform: "rotate(90deg)" }}
-                          />
+                          <img className="ico" src="assets/logo.png" alt="" />
                           <span>Matic</span>
-                          <img
-                            className="ico"
-                            src="assets/right.png"
-                            alt=""
-                            style={{ transform: "rotate(90deg)" }}
-                          />
+                          <img className="ico" src="assets/right.png" alt="" />
                         </div>
                       </div>
                     </div>

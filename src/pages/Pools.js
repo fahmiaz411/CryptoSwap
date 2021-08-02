@@ -221,7 +221,7 @@ function Pools({ scrollState, width, active, price }) {
                       flexDirection: "column",
                     }}
                   >
-                    <span className="txt12">CPIE Earned</span>
+                    <span className="txt12">NCIE Earned</span>
                     <span
                       style={{
                         color: "rgb(189, 194, 196)",
@@ -263,7 +263,7 @@ function Pools({ scrollState, width, active, price }) {
                           {formatter
                             .format(d.tStaked)
                             .substring(1, d.tStaked.toString().length + 4)}
-                          CPIE
+                          NCIE
                         </span>
                         <span
                           style={{
@@ -373,7 +373,7 @@ function Pools({ scrollState, width, active, price }) {
                           className="txt600"
                           style={{ color: "rgb(80, 227, 194)", fontSize: 14 }}
                         >
-                          CPIE{" "}
+                          NCIE{" "}
                           <span
                             style={{
                               color: "rgb(91, 90, 153)",
@@ -464,7 +464,7 @@ function Pools({ scrollState, width, active, price }) {
                           {formatter
                             .format(d.tStaked)
                             .substring(1, d.tStaked.toString().length + 4)}{" "}
-                          CPIE
+                          NCIE
                         </span>
                       </div>
                     </>

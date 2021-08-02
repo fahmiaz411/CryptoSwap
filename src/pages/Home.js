@@ -107,7 +107,7 @@ function Home({ scrollState, width, active, price }) {
                 fontWeight: 700,
               }}
             >
-              CPIE To Harvest
+              NCIE To Harvest
             </span>
             <span
               style={{
@@ -126,7 +126,7 @@ function Home({ scrollState, width, active, price }) {
                 fontWeight: 600,
               }}
             >
-              CPIE In Wallet
+              NCIE In Wallet
             </span>
             <span
               style={{
@@ -209,7 +209,7 @@ function Home({ scrollState, width, active, price }) {
                   color: "white",
                 }}
               >
-                CPIE, 100xCoin, LZ...
+                NCIE, 100xCoin, LZ...
               </span>
               <span
                 style={{
@@ -307,7 +307,7 @@ function Home({ scrollState, width, active, price }) {
               color: "rgb(91, 90, 153)",
             }}
           >
-            How to Buy <span style={{ color: "rgb(227, 80, 122)" }}>$CPIE</span>
+            How to Buy <span style={{ color: "rgb(227, 80, 122)" }}>$NCIE</span>
           </span>
           <span
             style={{
@@ -404,7 +404,7 @@ function Home({ scrollState, width, active, price }) {
                 color: "#50E3C2",
               }}
             >
-              CPIE Stats
+              NCIE Stats
             </span>
             <div
               style={{
@@ -415,7 +415,7 @@ function Home({ scrollState, width, active, price }) {
                 color: "rgb(169,169,169)",
               }}
             >
-              <span>Total CPIE Supply</span>
+              <span>Total NCIE Supply</span>
               <span>50,000,000,000</span>
             </div>
             <div
@@ -427,7 +427,7 @@ function Home({ scrollState, width, active, price }) {
                 color: "rgb(169,169,169)",
               }}
             >
-              <span>Total CPIE Burned</span>
+              <span>Total NCIE Burned</span>
               <span>0</span>
             </div>
             <div
@@ -439,7 +439,7 @@ function Home({ scrollState, width, active, price }) {
                 color: "rgb(169,169,169)",
               }}
             >
-              <span>New CPIE per block</span>
+              <span>New NCIE per block</span>
               <span>2000</span>
             </div>
           </div>

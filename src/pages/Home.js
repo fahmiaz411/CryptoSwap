@@ -144,10 +144,10 @@ function Home({ scrollState, width, active, price }) {
               style={{
                 position: "absolute",
                 opacity: 0.2,
-                width: width < 960 ? 220 : 300,
+                width: width < 960 ? 170 : 200,
                 transform: `translateX(${
-                  width < 960 ? "120px" : "60px"
-                }) translateY(${width < 960 ? "170px" : "110px"})`,
+                  width < 960 ? "140px" : "110px"
+                }) translateY(${width < 960 ? "170px" : "140px"})`,
               }}
             />
             <button

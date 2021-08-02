@@ -20,25 +20,25 @@ function Farms({ scrollState, width, active, price }) {
 
   const [data, setData] = useState([
     {
-      name: "CPIE-USDT",
+      name: "NCIE-USDT",
       backpic: "usdt.svg",
-      pic: "cpie.svg",
+      pic: "ncie.png",
       apr: 1058.32,
       liquidty: 798925,
       multiplier: 0.4,
     },
     {
-      name: "CPIE-USDC",
+      name: "NCIE-USDC",
       backpic: "usdc.svg",
-      pic: "cpie.svg",
+      pic: "ncie.png",
       apr: 1040.33,
       liquidty: 394286,
       multiplier: 0.2,
     },
     {
-      name: "CPIE-MATIC",
+      name: "NCIE-MATIC",
       backpic: "matic.svg",
-      pic: "cpie.svg",
+      pic: "ncie.png",
       apr: 1119.99,
       liquidty: 732483,
       multiplier: 0.4,

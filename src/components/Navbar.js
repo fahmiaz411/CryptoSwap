@@ -59,16 +59,17 @@ function Navbar({ sidebar, setSidebar }) {
               src="assets/logo.png"
               alt=""
               style={{
-                width: 40,
+                width: 30,
+                marginRight: 10,
               }}
             />
-            <span style={{ color: "rgb(110, 163, 170)" }}>Cryp</span>
+            <span style={{ color: "rgb(110, 163, 170)" }}>Nelo</span>
             <span
               style={{
                 color: "rgb(110, 163, 170)",
               }}
             >
-              To
+              chain
             </span>
           </div>
         </div>

@@ -15,21 +15,11 @@ function Pools({ scrollState, width, active, price }) {
     currency: "USD",
   });
 
-  const [list, setList] = useState([
-    "Hot",
-    "APR",
-    "Multiplier",
-    "Earned",
-    "Liquidity",
-  ]);
-
-  const [sort, setSort] = useState(0);
-
   const [data, setData] = useState([
     {
-      name: "CPIE",
-      backpic: "cpie.svg",
-      pic: "cpie.svg",
+      name: "NCIE",
+      backpic: "ncie.png",
+      pic: "ncie.png",
       apr: 219.4,
       staked: 3760519.82,
       tStaked: 3593637927,
@@ -88,7 +78,7 @@ function Pools({ scrollState, width, active, price }) {
                 color: "white",
               }}
             >
-              Cream Pools
+              Pools
             </span>
             <span
               style={{

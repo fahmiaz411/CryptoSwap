@@ -252,7 +252,7 @@ function Sidebar({
                     justifyContent: "center",
                   }}
                 >
-                  CPIE ${price}
+                  NCIE ${price}
                 </div>
               </Link>
             )}
@@ -275,18 +275,42 @@ function Sidebar({
               ) : (
                 <>
                   {/* sosmed */}
-                  <Link to="/#" style={{ textDecoration: "none" }}>
-                    <img className="ico" src="assets/facebook.png" alt="" />
-                  </Link>
-                  <Link to="/#" style={{ textDecoration: "none" }}>
-                    <img className="ico" src="assets/twitter.png" alt="" />
-                  </Link>
-                  <Link to="/#" style={{ textDecoration: "none" }}>
-                    <img className="ico" src="assets/reddit.png" alt="" />
-                  </Link>
-                  <Link to="/#" style={{ textDecoration: "none" }}>
-                    <img className="ico" src="assets/telegram.png" alt="" />
-                  </Link>
+
+                  <img
+                    onClick={() => {
+                      window.location.replace("https://facebook.com");
+                    }}
+                    className="ico"
+                    src="assets/facebook.png"
+                    alt=""
+                  />
+
+                  <img
+                    onClick={() => {
+                      window.location.replace("https://twitter.com");
+                    }}
+                    className="ico"
+                    src="assets/twitter.png"
+                    alt=""
+                  />
+
+                  <img
+                    onClick={() => {
+                      window.location.replace("https://reddit.com");
+                    }}
+                    className="ico"
+                    src="assets/reddit.png"
+                    alt=""
+                  />
+
+                  <img
+                    onClick={() => {
+                      window.location.replace("https://telegram.org");
+                    }}
+                    className="ico"
+                    src="assets/telegram.png"
+                    alt=""
+                  />
                 </>
               )}
             </div>

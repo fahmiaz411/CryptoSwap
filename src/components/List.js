@@ -227,7 +227,7 @@ function List({ d, i, width }) {
                     className="txt600"
                     style={{ color: "rgb(80, 227, 194)", fontSize: 14 }}
                   >
-                    CPIE{" "}
+                    NCIE{" "}
                     <span
                       style={{
                         color: "rgb(91, 90, 153)",
